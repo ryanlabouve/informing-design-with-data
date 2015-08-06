@@ -15,7 +15,10 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/theme/archers.css" id="theme">
+
+		<script src="//use.typekit.net/ycf2zfh.js"></script>
+		<script>try{Typekit.load();}catch(e){}</script>
 
 		<!-- Code syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -40,87 +43,618 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
-					<h1>Reveal.js</h1>
-					<h3>The HTML Presentation Framework</h3>
-					<p>
-						<small>Created by <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small>
-					</p>
-				</section>
-
-				<section>
-					<h2>Hello There</h2>
-					<p>
-						reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-					</p>
-				</section>
-
-				<!-- Example of nested vertical slides -->
-				<section>
+				<section id="intro">
 					<section>
-						<h2>Vertical Slides</h2>
-						<p>Slides can be nested inside of each other.</p>
-						<p>Use the <em>Space</em> key to navigate through all slides.</p>
-						<br>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
+						<h1>Informing Design with Data</h1>
+						<h3>—</h3>
+						<p>
+							<small>A Story by <a href="http://ryanlabouve.com">Ryan LaBouve</a> (<a href="http://twitter.com/ryanlabouve">@ryanlabouve</a>)</small>
+						</p>
+					</section>
+
+					<section>
+						<p>I wanted to do this talk on the sheer power of quantifiable data driving design</p>
 					</section>
 					<section>
-						<h2>Basement Level 1</h2>
-						<p>Nested slides are useful for adding additional detail underneath a high level horizontal slide.</p>
+						<img src="/lib/img/a-or-b.png" alt="a or b">
+						<p>Come up with a few options</p>
+						<p>Pump through a bunch of trafic, flowing some to one and some to the other</p>
+						<p>Track conversion rate, and whichever has a higher rate wins</p>
 					</section>
 					<section>
-						<h2>Basement Level 2</h2>
-						<p>That's it, time to go back up.</p>
-						<br>
-						<a href="#/2">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="transform: rotate(180deg); -webkit-transform: rotate(180deg);">
-						</a>
+						<p><em>Design</em> + <strong>Science</strong> => </p>
+						<p>All design decsions are not objectively right.</p>
+					</section>
+					<section>
+						<p>But...</p>
+					</section>
+					<section>
+						<img src="/lib/img/a-or-b.png" alt="a or b">
+						<p>What if both of the options are just plain wrong?</p>
+						<p>You've just decided which of the wrong options is better</p>
+					</section>
+					
+					<section>
+						<p>This talk will guide you through the stages of making objective design decisoins.</p>
+						<p>Using data</p>
+					</section>
+
+					<section>
+						but we'll start with the very basics
+						{{Picture of Caveman and Fire}} - {{ Picture of Rob wearing man by fire}}
+					</section>
+
+					<section>
+						{{fwp}}
 					</section>
 				</section>
 
 				<section>
-					<h2>Slides</h2>
-					<p>
-						Not a coder? Not a problem. There's a fully-featured visual editor for authoring these, try it out at <a href="http://slides.com" target="_blank">http://slides.com</a>.
-					</p>
+					<h2>Today's Agenda</h2>
+					<ol>
+						<li>Problem Definition</li>
+						<li>User Research</li>
+						<li>Design Sprint</li>
+						<li>Technical Prototyping</li>
+						<li>Smarter Roadmaps</li>
+						<li>Feature Audit</li>
+						<li>Expiriment and Measure</li>
+					</ol>
 				</section>
 
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
+
+				<section id="problem-definition">
+					<p><small>Problem Definition</small></p>
+					<section>
+						<h4>Project Definition</h4>
+						<p>
+							Project Definition (Creative Breif)— Defining a problem w/ Business, Design, and Engineering
+						</p>
+						<h4>How it Informs Design</h4>
+  					<p>
+  						Unifies the design product vision with 
+  						information from business, design and engineering
+  					</p>
+					</section>
+
+					<section>
+						<blockquote>
+							A problem well-stated is half-solved.
+							<br/>
+							<small>—John Dewey</small>
+						</blockquote>
+					</section>
+
+					<section>
+						<p>A quick tale about this...</p>
+						<img src="/lib/img/blank-personas.png" alt="Three blank personas" />
+					</section>
+
+					<section>
+						<p>In an agile shoppe close to you...</p>
+					</section>
+
+					<section>
+						<p>Grab next open task from JIRA</p>
+						<p>Design the Dashboard (3 points)</p>
+						<img src="/lib/img/JIRA-do-dashboard.jpg" alt="Do the dashboard JIRA screenshot" />
+					</section>
+
+					<section>
+						<p>What's Wrong with this?</p>
+						<img src="/lib/img/JIRA-do-dashboard-zoomed.jpg" alt="Do the dashboard JIRA screenshot zoomed" />
+					</section>
+
+					<section>
+						<p>How did this happen?</p>
+						<img src="/lib/img/JIRA-do-dashboard-zoomed.jpg" alt="Do the dashboard JIRA screenshot zoomed" />
+					</section>
+					
+					<section>
+						<blockquote>We need a dashboard<br/><small>—Business</small></blockquote>
+						<img src="/lib/img/personas-business-highlight.png" alt="Business Talking" />
+					</section>
+
+					<section>
+						<blockquote>I have no idea what this means... Let's just find some cool dashboard screenshots in dribbble, and brand them for our company?<br/><small>—Design</small></blockquote>
+						<img src="/lib/img/personas-design-highlight.png" alt="Design Talking" />
+					</section>
+
+					<section>
+						<blockquote>We literally have none of this data... Let's just cut out what doesn't make sense.<br/><small>—Engineering</small></blockquote>
+						<img src="/lib/img/personas-engineering-highlight.png" alt="Engineering Talking" />
+					</section>
+
+					<section>
+						<blockquote>This misses like... every critical business goal. There is 0 ROI.<br/><small>—Business</small></blockquote>
+						<img src="/lib/img/personas-business-highlight.png" alt="Business Talking" />
+					</section>
+
+					<section>
+						<blockquote>This should have been obvious, here's a lot more detail about what we actually want.<br/><small>—Business</small></blockquote>
+						<img src="/lib/img/personas-business-highlight.png" alt="Business Talking" />
+					</section>
+
+					<section>
+						<blockquote>Redesings...<small>—Design</small></blockquote>
+						<img src="/lib/img/personas-design-highlight.png" alt="Design Talking" />
+					</section>
+
+					<section>
+						<blockquote>Re-engineers...<small>—Engineering</small></blockquote>
+						<img src="/lib/img/personas-engineering-highlight.png" alt="Engineering Talking" />
+					</section>
+
+					<section>
+						<p>This wastes a lot of cycles and is a common story in many companies</p>
+						<p>Lets go back to the start of this conversation</p>
+					</section>
+
+					<section>
+						<blockquote>We need a dashboard<br/><small>—Business</small></blockquote>
+						<img src="/lib/img/personas-business-highlight.png" alt="Business Talking" />
+					</section>
+
+					<section>
+						<p>Problems are not Solutions</p>
+					</section>
+
+					<section>
+						<blockquote>We need a dashboard<br/><small>—Business</small></blockquote>
+						<img src="/lib/img/personas-business-highlight.png" alt="Business Talking" />
+					</section>
+
+					<section>
+						<p>And this is a problem</p>
+						<p>Which largely lacks definition.</p>
+					</section>
+
+					<section>
+						<p>And we have to work together to do this.</p>
+						<img src="/lib/img/personas-all-highlight.png" alt="Design, Developer, and Business Highlight" />
+					</section>
+					
+					<section>
+						<p>Defining a problem Step 1:</p>
+						<p>Get the right people involved</p>
+						<img src="/lib/img/blank-personas.png" alt="Three blank personas" />
+					</section>
+
+					<section>
+						"Overlap builds Trust" — Cap Watkins, VP Design Buzzfeed
+					</section>
+
+					<section>
+						<p>Defining a problem Step 1:</p>
+						<p>Get the right people involved</p>
+						<img src="/lib/img/personas-all-highlight.png" alt="Three highlighted personas" />
+					</section>
+
+					<section>
+						Defining a project, Step 2: Answer a few questions
+					</section>
+
+					<section>
+						<p>Create a document answering...</p>
+						<ul>
+							<li>What are you making?</li>
+							<li>What problems are you solving by doing this?</li>
+							<li>How do you design success?</li>
+						</ul>
+						http://blog.capwatkins.com/my-design-process-part-1
+					</section>
+					<section>
+						Again, it's important to vett this through the group.
+						This is the time where it's cheap and easy to ask questions, disagree, etc.
+						http://blog.capwatkins.com/my-design-process-part-1
+					</section>
+					<section>
+						Refer to this document throughout the lifecycle of a project.
+						It can help maintain focus, and prevent scope creep
+						http://blog.capwatkins.com/my-design-process-part-1
+					</section>
+					
+					<section>
+						This provides a single source of truth the whole team can use.
+						Allows designers to ask the right questions.
+					</section>
+
+					<section>
+						<h4>Project Definition</h4>
+						<p>
+							Project Definition (Creative Breif)— Defining a problem w/ Business, Design, and Engineering
+						</p>
+						<h4>How it Informs Design</h4>
+  					<p>
+  						Unifies the design product vision with 
+  						information from business, design and engineering
+  					</p>
+					</section>
 				</section>
 
-				<section>
-					<h2>Touch Optimized</h2>
-					<p>
-						Presentations look great on touch devices, like mobile phones and tablets. Simply swipe through your slides.
-					</p>
+				<section id="user-research">
+					<small>User Research</small>
+					<section>
+						<h4>User Research</h4>
+						<p>
+							Project Definition (Creative Breif)— Defining a problem w/ Business, Design, and Engineering
+						</p>
+						<h3>How it Informs Design</h3>
+  					<p>
+							Users are the lens through which we look that evaluates whether a design makes sense or not.
+  					</p>
+					</section>
+
+					<section>
+						<h3>#Longread</h3>
+						<p>
+							'There is this company that I worked with a couple of years ago that were doing coupons. Their site looked a little crazy. We said, “We can make this better.” We redesigned all the visual design... We put it back in front of customers, and they looked at this new, fancy visual design that looked really good, and they said, “Wait, who’s behind this thing? Are people making money off of me?” We realized that we screwed it up. We tried to make it beautiful for us, but in doing so, we broke the product.'
+						</p>
+						<a href="https://blog.intercom.io/podcast-braden-kowitz-talks-design-and-startups/">https://blog.intercom.io/podcast-braden-kowitz-talks-design-and-startups/</a>
+					</section>
+					
+					<section>
+						<p>It's important to know our users</p>
+					</section>
+					
+					<section>
+						<p><strong>Users.</strong>What comes to your mind?</p>
+					</section>
+					
+					<section data-background="/lib/img/blank-users.jpg">
+						&nbsp;
+					</section>
+					
+					<section>
+						<p>Yey, google image serach!</p>
+						<p>Tons of blank faces...</p>
+					</section>
+
+					<section>
+						<p>Knowing our users helps us frame the problem</p>
+						<p>It helps us know we are solving the right problem.</p>
+					</section>
+
+					<section>Mailchimp Personas</section>
+
+					<section>
+						TODO: Break out into individual posters
+						<img src="/lib/img/mailchimp-users.jpg" alt="Mailchip UX Personas Poster" />
+						https://blog.mailchimp.com/new-mailchimp-user-persona-research/
+					</section>
+					<section>
+						<ul>
+							<li>Step 1: Interview Steakholders to see who we assume our customers are.</li>
+							<li>Step 2: Rank our pool of active users by industry</li>
+							<li>Step 3: Identify subjects from popular industries and interview, interview, interview</li>
+							<li>Step 4: Analyze what was seen and heard</li>
+							<li>Step 5: Share findings with team</li>
+						</ul>
+						https://blog.mailchimp.com/new-mailchimp-user-persona-research/
+					</section>
+
+					<section>
+						<ul>
+							<li>Step 1: Interview Steakholders to see who we assume our customers are.</li>
+							<li>Step 2: Rank our pool of active users by industry</li>
+							<li>Step 3: Identify subjects from popular industries and interview, interview, interview</li>
+							<li>Step 4: Discuss what was seen and heard</li>
+							<li>Step 5: Deliver finding to company</li>
+						</ul>
+						https://blog.mailchimp.com/new-mailchimp-user-persona-research/
+					</section>
+
+					<section>
+						<p>Step 1: Interview Steakholders to see who we assume our customers are.</p>
+					</section>
+
+					<section>
+						<p>Step 2: Rank our pool of active users by industry</p>
+					</section>
+
+					<section>
+						<p>Step 3: Identify subjects from popular industries and interview, interview, interview.</p>
+					</section>
+
+					<section>
+						<p>How we interview users.</p>
+					</section>
+
+					<section>
+						<p>Step 4: Discuss what was seen and heard</p>
+					</section>
+
+					<section>
+						<p>Who is involved here?</p>
+						<img src="/lib/img/personas-all-highlight.png" alt="Design, Developer, and Business Highlight" />
+					</section>
+
+					<section>
+						<p>Step 5: Deliver finding to company.</p>
+					</section>
+
+					<section>
+						Examples of Hi-fi personas
+					</section>
+
+					<section>
+						Example of doodled personas
+					</section>
+
+					<section>
+						Example of Google Doc with Todd
+					</section>
 				</section>
 
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
+				<section id="design-sprint">
+					<section>
+						<h2>Utalize your team</h2>
+						http://www.gv.com/sprint/
+					</section>
 
-						Write content using inline or external Markdown.
-						Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
+					<section>
+						<p>Sometimes the best solution will come from the least likely spot</p>
+					</section>
 
-						```
-						<section data-markdown>
-						  ## Markdown support
+					<section>
+						<p>If you are depriving teams or employees from participating in the design process, you are missing your best ideas.</p>
+						<p>Give everyone on your team a way to take part in design process</p>
+					</section>
 
-						  Write content using inline or external Markdown.
-						  Instructions and more info available in the [readme](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
+					<section>
+						<h2>Design Sprints</h2>
+					</section>
+					<section>
+						Why? What this is? How it helps?
+						https://developers.google.com/design-sprint/downloads/DesignSprintMethods.pdf
+					</section>
+					<section> 
+						<small>Design Sprint, Step 1</small>
+						<h2>Product Definition</h2>
+						<p>We already did this!</p>
+					</section>
+					<section>
+						<small>Design Sprint, Step 2</small>
+						<h2>Brainstorm Alone</h2>
+						<p>Empower everyone to do this, not just designers.</p>
+						<p>Your most surprising and innovative ideas will come from the least likely of places</p>
+					</section>
+					<section>
+						<p>A few ways to empower individuals to brainstorm.</p>
+						<p>Especially those who don't feel "that creative"</p>
+					</section>
+					<section>
+						Brainstorming Alone: Critical Path Diagram
+						<img src="http://ryanlabouve.com/wp-content/uploads/2014/12/add-word-critical-path-annotated.jpg" alt="Diagram of Critical Path"/>
+					</section>
+
+					<section>
+						Brainstorming Alone: Critical Path Diagram
+						<img src="http://ryanlabouve.com/wp-content/uploads/2014/12/ui-flow.jpg" alt="UI Flow Shorthand"/>
+					</section>
+
+					<section>
+						Empower brainstorming
+						Teach Them Bad Sketching
+
+						TODO: UI Sketching Link
+						TODO: Practical?
+						https://blog.intercom.io/podcast-braden-kowitz-talks-design-and-startups/
+					</section>
+
+					<section>
+						Storyboards
+						<img src="http://ryanlabouve.com/wp-content/uploads/2014/12/storyboard.jpg" alt="Storyboards"/>
+					</section>
+
+
+					<section>
+						<small>Design Sprint, Step 3</small>
+						<h2>Group Convergence</h2>
+					</section>
+					
+					<section>
+						Best ideas win. Doesn’t matter if its design from your lead UX designer, an engineer, or your Grandma
+					</section>
+					
+					<section>
+						<small>Design Sprint, Step 4</small>
+						<h2>Prototype</h2>
+					</section>
+
+					<section>
+						"We’re going for “goldilocks level fidelity”; just good enough to suspend disbelief."
+						Universality jpjg
+					</section>
+
+					<section>
+						Maybe should go over some tools: http://ryanlabouve.com/embracing-minimal-design-sprints/
+					</section>
+
+					<section>
+						<small>Design Sprint, Step 5</small>
+						<h2>Validate</h2>
+					</section>
 				</section>
+
+				<section id="technical-prototyping">
+					<section>
+						<h2>Technical Prototyping</h2>
+						<small>"borrow" other peoples data to help you make decisions</small>
+					</section>
+
+					<section>
+						<p>We talked a little about prototyping in the last slide.</p>
+					</section>
+
+					<section data-background="/lib/img/prototype-def.jpg">
+						<p></p>
+					</section>
+
+					<section data-background="/lib/img/prototype-low-fidelity.png">
+						<p>Low Fidelity = Primitive Form</p>
+					</section>
+
+					<section data-background="/lib/img/prototype-primitive-form.png">
+						<p>Old Version = Primitive Form</p>
+					</section>
+
+					<section data-background="/lib/img/prototype-smoke-and-mirrors.png">
+						<p>Prototype = Smoke and Mirrors</p>
+					</section>
+
+					<section>
+						<p>Potentially, All 3!</p>
+					</section>
+
+					<section>
+						<p>In a previous job, I worked for OU...</p>
+						<p>To skirt around tales of political woe, let's my just frame a situation</p>
+					</section>
+
+					<section>
+						<p>Boss: We are re-designing the OU homepage. We need a final direction on design by tomorrow, and would love your oppinion.</p>
+						<img src="/lib/img/office-space.jpg" alt="Office Space Boss">
+						<p>Me:... </p>
+						<img src="http://vignette2.wikia.nocookie.net/epicrapbattlesofhistory/images/5/59/Stare-What-GIF.gif/revision/latest?cb=20140928165911" alt="Bubbles wat" />
+					</section>
+					
+					<section>
+						<h3>Original Site</h3>
+						<img src="/lib/img/prototype/original.jpg" alt="Original OU Site">
+					</section>
+
+					<section>
+						<h2>TL;DR</h2>
+						<p>This is what I delivered the next day</p>
+					</section>
+
+
+					<section data-background="/lib/img/prototype/overview.jpg">
+					</section>
+
+					<section>
+						<p>MGMT's Reaction</p>
+						<img src="http://static.tvtropes.org/pmwiki/pub/images/jd_5985.png" alt="alladin... genie and jafar or whatever his name is" />
+					</section>
+
+					<section>
+						<p>This truth is, all of this took 1 hour...</p>
+					</section>
+
+					<section data-background="/lib/img/prototype-smoke-and-mirrors.png">
+						<p>Smoke and Mirrors via Dev Tools</p>
+					</section>
+
+					<section>
+						<h3>Modern, with Traditional Roots</h3>
+						<img src="/lib/img/prototype/01-moder-with-traditional-roots.jpg" />
+					</section>
+
+					<section>
+						<h3>...Harvard</h3>
+						<img src="/lib/img/prototype/01-actually-harvard.jpg" />
+					</section>
+
+					<section>
+						<h3>Sturdy and Approachable</h3>
+						<img src="/lib/img/prototype/02-sturdy-and-approachable.jpg" />
+					</section>
+
+					<section>
+						<h3>...Bates</h3>
+						<img src="/lib/img/prototype/02-actually-bates.jpg" />
+					</section>
+
+					<section>
+						<h3>Techie and Scientific</h3>
+						<img src="/lib/img/prototype/03-techie-and-scientific.jpg" />
+					</section>
+
+					<section>
+						<h3>...Michigan</h3>
+						<img src="/lib/img/prototype/03-actually-michigan.jpg" />
+					</section>
+
+					<section>
+						<h3>Classic</h3>
+						<img src="/lib/img/prototype/04-classic.jpg" />
+					</section>
+
+					<section>
+						<h3>...Cornell</h3>
+						<img src="/lib/img/prototype/04-actually-cornell.jpg" />
+					</section>
+
+					<section>
+						<h3>Rock Magazine</h3>
+						<img src="/lib/img/prototype/05-rock-magazine.jpg" />
+					</section>
+
+					<section>
+						<h3>...Whatever this site</h3>
+						<img src="/lib/img/prototype/05-actually-this.jpg" />
+					</section>
+
+					<section>
+						<h3>Honest and Trendy</h3>
+						<img src="/lib/img/prototype/06-honest-and-trendy.jpg" />
+					</section>
+
+					<section>
+						<h3>Australian Catholic University</h3>
+						<img src="/lib/img/prototype/06-actually-australian-catholic-university.jpg" />
+					</section>
+
+					<section>
+						<p>Get power from other people data</p>
+						<p>Helps make quick decisoins</p>
+						<p>Not just spinning your tires.</p>
+					</section>
+				</section>
+
+				<section id="smart-roadmaps">
+					<a href="https://blog.intercom.io/before-you-plan-your-product-roadmap/">https://blog.intercom.io/before-you-plan-your-product-roadmap/</a>
+					<section>
+						A simple way to visualize feature usage is to plot out all your features on two axes: how many people use a feature, and how often.
+					</section>
+					<section>
+						<img src="https://blog.intercom.io/wp-content/uploads/2012/07/Graph-Starred.jpg" alt="">
+					</section>
+					<section>
+
+						What you will think:
+							<img src="/lib/img/roadmap/ideal-feature-usage.jpg" alt="Ideal Feature Usage Bar Chart" />
+					</section>
+					<section>
+						What you will likely find:
+							<img src="/lib/img/roadmap/what-you-will-likely-find.jpg" alt="Ideal Feature Usage Bar Chart" />
+					</section>
+					<section>
+						Possible Disruption: 
+						<img src="/lib/img/roadmap/possible-disruption.jpg" alt="Ideal Feature Usage Bar Chart" />
+					</section>
+				</section>
+
+				<section id="feature-audits">
+					Mixpanel to analyze leaky funnels
+					https://blog.intercom.io/wp-content/uploads/2013/07/5Whys-messy.png
+				</section>
+				<section id="conclusion">
+					<section>
+						<blockquote>Not everything that matters can be measured, and not everything that is measured matters. — Elliot Eisner</blockquote>
+					</section>
+					<section>
+						Expiriment and Measure
+					</section>
+					<section>
+						Read that IA book
+						Finish analyitics book
+						value prop design book
+						Just enough research book
+					</section>
+				</section>
+
 
 				<section>
 					<section id="fragments">
@@ -145,67 +679,6 @@
 					</section>
 				</section>
 
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=slide#/transitions">Slide</a> -
-						<a href="?transition=convex#/transitions">Convex</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a>
-					</p>
-				</section>
-
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						reveal.js comes with a few themes built in: <br>
-						<!-- Hacks to swap themes after the page has loaded. Not flexible and only intended for the reveal.js demo deck. -->
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/black.css'); return false;">Black (default)</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/white.css'); return false;">White</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/league.css'); return false;">League</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/sky.css'); return false;">Sky</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/beige.css'); return false;">Beige</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/simple.css'); return false;">Simple</a> <br>
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/serif.css'); return false;">Serif</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/blood.css'); return false;">Blood</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/night.css'); return false;">Night</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/moon.css'); return false;">Moon</a> -
-						<a href="#" onclick="document.getElementById('theme').setAttribute('href','css/theme/solarized.css'); return false;">Solarized</a>
-					</p>
-				</section>
-
-				<section>
-					<section data-background="#dddddd">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#dddddd"</code> on a slide to change the background color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="navigate-down">
-							<img width="178" height="238" data-src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code>&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Tiled Backgrounds</h2>
-						<pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-					<section data-background-video="https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.mp4,https://s3.amazonaws.com/static.slid.es/site/homepage/v1/homepage-video-editor.webm" data-background-color="#000000">
-						<div style="background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px;">
-							<h2>Video Backgrounds</h2>
-							<pre><code style="word-wrap: break-word;">&lt;section data-background-video="video.mp4,video.webm"&gt;</code></pre>
-						</div>
-					</section>
-					<section data-background="http://i.giphy.com/90F8aUepslB84.gif">
-						<h2>... and GIFs!</h2>
-					</section>
-				</section>
-
 				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
 					<h2>Background Transitions</h2>
 					<p>
@@ -222,75 +695,6 @@
 					<pre><code style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
 				</section>
 
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) {
-        node.className += ' roll';
-      }
-    }
-  }
-}
-					</code></pre>
-					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
-
-				<section>
-					<h2>Marvelous List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
-
-				<section>
-					<h2>Tabular Tables</h2>
-					<table>
-						<thead>
-							<tr>
-								<th>Item</th>
-								<th>Value</th>
-								<th>Quantity</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Apples</td>
-								<td>$1</td>
-								<td>7</td>
-							</tr>
-							<tr>
-								<td>Lemonade</td>
-								<td>$2</td>
-								<td>18</td>
-							</tr>
-							<tr>
-								<td>Bread</td>
-								<td>$3</td>
-								<td>2</td>
-							</tr>
-						</tbody>
-					</table>
-				</section>
 
 				<section>
 					<h2>Clever Quotes</h2>
@@ -302,24 +706,6 @@ function linkify( selector ) {
 						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
 						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
 					</blockquote>
-				</section>
-
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Speaker View</h2>
-					<p>There's a <a href="https://github.com/hakimel/reveal.js#speaker-notes">speaker view</a>. It includes a timer, preview of the upcoming slide as well as your speaker notes.</p>
-					<p>Press the <em>S</em> key to try it out.</p>
-
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
 				</section>
 
 				<section>
@@ -336,45 +722,6 @@ function linkify( selector ) {
 						apply broader style changes, like switching the page background.
 					</p>
 				</section>
-
-				<section data-state="customevent">
-					<h2>State Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
-
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press B or . on your keyboard to pause the presentation. This is helpful when you're on stage and want to take distracting slides off the screen.
-					</p>
-				</section>
-
-				<section>
-					<h2>Much more</h2>
-					<ul>
-						<li>Right-to-left support</li>
-						<li><a href="https://github.com/hakimel/reveal.js#api">Extensive JavaScript API</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#auto-sliding">Auto-progression</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#parallax-background">Parallax backgrounds</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js#keyboard-bindings">Custom keyboard bindings</a></li>
-					</ul>
-				</section>
-
-				<section style="text-align: left;">
-					<h1>THE END</h1>
-					<p>
-						- <a href="http://slides.com">Try the online editor</a> <br>
-						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
-					</p>
-				</section>
-
 			</div>
 
 		</div>
