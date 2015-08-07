@@ -11,6 +11,14 @@ html * {
   border: 0 !important;
   box-shadow: none !important; }
 
+.light {
+  color: white;
+  font-weight: bold;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5); }
+
+.big p {
+  font-size: 2em !important; }
+
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
